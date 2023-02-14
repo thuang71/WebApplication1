@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+  
+}
+@model Payment
+
+@using (Html.BeginForm("Pay", "Payment", FormMethod.Post))
+{
+            <div class="">
+        @Html.LabelFor(model => model.CreditCardNumber)
+        @Html.EditorFor(model => model.CreditCardNumber)
+            </div>
+            <div class="">
+        @Html.LabelFor(model => model.ExpirationDate)
+        @Html.EditorFor(model => model.ExpirationDate)
+            </div>
+            <div class="">
+        @Html.LabelFor(model => model.CVV)
+        @Html.EditorFor(model => model.CVV)
+            </div>
+            <div class="">
+        @Html.LabelFor(model => model.Amount)
+        @Html.EditorFor(model => model.Amount)
+            </div>
+            <button type="submit">Pay</button>
+}
